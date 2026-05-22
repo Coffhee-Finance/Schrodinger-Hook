@@ -173,7 +173,4 @@ Coffhee Finance consists of three core products:
 | eUSD             | Confidential stablecoin settlement layer    |
 | eRWAs            | Encrypted real-world asset marketplace      |
 
-Together, these products form:
-
-> a confidential financial infrastructure layer for tokenized finance.
 
