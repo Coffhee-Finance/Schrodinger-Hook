@@ -1,0 +1,47 @@
+{
+  "lib/cofhe-contracts": {
+    "tag": {
+      "name": "v0.1.3",
+      "rev": "cb76c99620e1b4acd395e00672be21e48702429f"
+    }
+  },
+  "lib/forge-std": {
+    "tag": {
+      "name": "v1.16.1",
+      "rev": "620536fa5277db4e3fd46772d5cbc1ea0696fb43"
+    }
+  },
+  "lib/hyperlane-monorepo": {
+    "tag": {
+      "name": "v1.5.8",
+      "rev": "dc89ee1558f437b5937f9f4694e04048330a990f"
+    }
+  },
+  "lib/openzeppelin-contracts": {
+    "tag": {
+      "name": "v5.6.1",
+      "rev": "5fd1781b1454fd1ef8e722282f86f9293cacf256"
+    }
+  },
+  "lib/reactive-lib": {
+    "tag": {
+      "name": "v0.2.0",
+      "rev": "d664678a7d86204c9391af4cedfd5ae0b0b904e4"
+    }
+  },
+  "lib/usingtellor": {
+    "tag": {
+      "name": "v5.0.4",
+      "rev": "cfc56240e0f753f452d2f376b5ab126fa95222ad"
+    }
+  },
+  "lib/v4-core": {
+    "tag": {
+      "name": "v4.0.0",
+      "rev": "e50237c43811bd9b526eff40f26772152a42daba"
+    }
+  },
+  "lib/v4-periphery": {
+    "rev": "9dafaaecc1e2e1e824eda9d941085f96517d827b"
+  }
+}
