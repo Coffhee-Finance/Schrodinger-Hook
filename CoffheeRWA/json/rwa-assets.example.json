@@ -1,0 +1,32 @@
+{
+  "centrifuge": {
+    "treasuryPool": {
+      "tokenId": 1001,
+      "issuer": "Centrifuge",
+      "assetType": "US Treasuries",
+      "navFeed": "TELLOR_QUERY_ID_1"
+    },
+    "privateCredit": {
+      "tokenId": 1002,
+      "issuer": "Centrifuge",
+      "assetType": "Private Credit",
+      "navFeed": "TELLOR_QUERY_ID_2"
+    }
+  },
+  "benji": {
+    "fobxx": {
+      "tokenId": 2001,
+      "issuer": "Franklin Templeton",
+      "assetType": "Government Money Fund",
+      "navFeed": "TELLOR_QUERY_ID_3"
+    }
+  },
+  "securitize": {
+    "treasuryVault": {
+      "tokenId": 3001,
+      "issuer": "Securitize",
+      "assetType": "Tokenized Treasury",
+      "navFeed": "TELLOR_QUERY_ID_4"
+    }
+  }
+}
