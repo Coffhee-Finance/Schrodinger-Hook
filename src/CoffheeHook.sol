@@ -2,6 +2,7 @@
 pragma solidity ^0.8.26;
 
 // CoffheeHook ArbSepolia Address: 0xDb58A140928669d674D7a788394073C231d78724
+// Private Rebalancing Hook built on top of Uniswap V4
 
 import {
     FHE,
