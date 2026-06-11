@@ -192,6 +192,8 @@ These inputs can be used to drive automated rebalancing strategies.
 
 # Reactive Network Integration
 
+See code: https://github.com/Coffhee-Finance/Schrodinger-Hook/blob/main/CoffheeRWA/src/ReactiveRWAController.sol
+
 The Schrödinger RWA Hook integrates with Reactive Network.
 
 Reactive Network provides event-driven smart contracts that automatically react to blockchain events and trigger follow-up actions without requiring off-chain bots or keepers.
