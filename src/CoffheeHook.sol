@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-// CoffheeHook ArbSepolia Address: 0xDb58A140928669d674D7a788394073C231d78724
-// Private Rebalancing Hook built on top of Uniswap V4
+// CoffheeHook ArbSepolia Address: 0xC4Dd117e53f9624ED2EE02e6c8CD662645F6e56A
 
 import {
     FHE,
@@ -19,7 +18,6 @@ import {IPoolManager} from "v4-core/src/interfaces/IPoolManager.sol";
 import {PoolKey} from "v4-core/src/types/PoolKey.sol";
 import {PoolId, PoolIdLibrary} from "v4-core/src/types/PoolId.sol";
 import {Currency} from "v4-core/src/types/Currency.sol";
-import {SwapParams} from "v4-core/src/types/PoolOperation.sol";
 import {
     BeforeSwapDelta,
     BeforeSwapDeltaLibrary
@@ -242,7 +240,7 @@ contract CoffheeHook {
     function beforeSwap(
         address,
         PoolKey calldata key,
-        SwapParams calldata,
+        IPoolManager.SwapParams calldata,
         bytes calldata
     )
         external
@@ -283,7 +281,7 @@ contract CoffheeHook {
     function afterSwap(
         address,
         PoolKey calldata key,
-        SwapParams calldata,
+        IPoolManager.SwapParams calldata,
         BalanceDelta delta,
         bytes calldata
     )
@@ -478,6 +476,44 @@ contract CoffheeHook {
             FHE.asEuint64(BPS)
         );
     }
+
+    function grantPositionViewAccess(
+    bytes32 planId,
+    uint8 asset,
+    address viewer
+) external {
+    Plan storage p = plans[planId];
+
+    if (p.owner == address(0)) revert InvalidPlan();
+    if (p.owner != msg.sender) revert NotOwner();
+    if (asset >= p.assetCount) revert InvalidAssetCount();
+
+    FHE.allow(p.exposure[asset], viewer);
+    FHE.allow(p.targetBps[asset], viewer);
+    FHE.allow(p.lastRebalanceDelta[asset], viewer);
+}
+
+function getEncryptedPositionHandles(bytes32 planId, uint8 asset)
+    external
+    view
+    returns (
+        euint64 exposure,
+        euint64 target,
+        euint64 lastRebalanceDelta
+    )
+{
+    Plan storage p = plans[planId];
+
+    if (p.owner == address(0)) revert InvalidPlan();
+    if (p.owner != msg.sender) revert NotOwner();
+    if (asset >= p.assetCount) revert InvalidAssetCount();
+
+    return (
+        p.exposure[asset],
+        p.targetBps[asset],
+        p.lastRebalanceDelta[asset]
+    );
+}
 
     function _allowOwnerAndContract(euint64 value) internal {
         FHE.allowThis(value);
