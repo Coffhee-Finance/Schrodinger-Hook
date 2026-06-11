@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
+// Arbitrum Sepolia address: 0x1324Db5bD1a6BDaFdc184AaC755D05bfA9e4fFCf
 // Reactive Network is not imported here; it is represented as a trusted automation sender that calls this controller. For the MVP/demo
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
