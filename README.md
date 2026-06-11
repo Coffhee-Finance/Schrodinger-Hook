@@ -50,31 +50,8 @@ The Schrödinger Hook acts as a programmable strategy layer on top of Uniswap v4
 
 ---
 
-## eUSD
-
-eUSD is the native stablecoin of Coffhee Finance.
-
-Users may mint eUSD using approved collateral and deploy it into encrypted strategies managed by the Schrödinger Hook.
-
----
-
-## eRWA
-
-eRWA assets are encrypted wrappers representing tokenized real-world assets.
-
-Examples include:
-
-* Treasury products
-* Bonds
-* Private credit
-* Money market funds
-* Institutional yield products
-
-eRWAs can be deployed into Schrödinger Hook strategies alongside other encrypted assets.
-
----
-
-# Architecture
+## FHE
+The Schrödinger Hook requires that all tokens be an ERC 7984 confidenital token to participate in pools. This confidential token standard is built on top of Fully Homomorphic Encryption. For this example of the Schrodinger Hook, the Fhenix SDK and library were used to create this hook.
 
 ## Built on Uniswap v4
 
