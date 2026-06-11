@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
+// Reactive Network is not imported here; it is represented as a trusted automation sender that calls this controller. For the MVP/demo
+
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {
     IHyperlaneMailbox,
