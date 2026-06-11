@@ -5,6 +5,8 @@ import {Script, console2} from "forge-std/Script.sol";
 import {IPoolManager} from "v4-core/src/interfaces/IPoolManager.sol";
 import {CoffheeHook} from "../src/CoffheeHook.sol";
 
+//Deployment to Arbitrum Sepolia
+
 contract DeployCoffheeHook is Script {
     function run(address poolManager)
         external
