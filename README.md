@@ -2,7 +2,7 @@
 
 ## Encrypted Market Infrastructure
 
-Coffhee Finance is an encrypted automated market maker (AMM) built on Arbitrum and powered by Uniswap v4 Hooks.
+Coffhee Finance is an encrypted automated market maker (eAMM) built on Arbitrum and powered by Uniswap v4 Hooks.
 
 The protocol introduces the **Schrödinger Hook**, a new class of market infrastructure that enables confidential portfolio management, automated rebalancing, dark pool execution, treasury management, and tokenized real-world asset (RWA) strategies.
 
