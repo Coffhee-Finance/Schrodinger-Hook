@@ -210,8 +210,7 @@ This removes the need for centralized keeper infrastructure while ensuring portf
 ```bash
 forge install OpenZeppelin/openzeppelin-contracts
 forge install foundry-rs/forge-std
-forge install zama-ai/fhevm-solidity
-forge install LayerZero-Labs/LayerZero-v2
+npm install -D @cofhe/foundry-plugin@^0.5.2 @cofhe/mock-contracts@^0.5.2 @fhenixprotocol/cofhe-contracts@^0.1.3 @openzeppelin/contracts
 ```
 
 ## Build
