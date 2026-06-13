@@ -15,8 +15,7 @@ The protocol separates data ingestion, truth verification, automation, and execu
 ```text
 ┌───────────────────────────────┐
 │ External Data Layer           │
-│ Centrifuge, Ondo, Maple,      │
-│ Securitize APIs               │
+│ RWA APIs               │
 └───────────────┬───────────────┘
                 │
                 ▼
@@ -136,13 +135,6 @@ The result is a privacy-preserving execution environment that minimizes informat
 
 The Schrödinger RWA Hook extends the architecture to tokenized real-world assets.
 
-Underlying RWA positions can originate from providers such as:
-
-* Centrifuge
-* Ondo Finance
-* Maple Finance
-* Securitize
-
 These positions are represented inside the protocol through encrypted ERC-1155 wrappers.
 
 The wrapper abstracts the underlying asset while allowing the hook to:
@@ -154,34 +146,6 @@ The wrapper abstracts the underlying asset while allowing the hook to:
 * Manage multi-asset strategies
 
 without exposing portfolio composition to the public market.
-
----
-
-# Cross-Chain Design
-
-The protocol is designed to support a separation between encrypted computation and asset settlement.
-
-```text
-Ethereum
-│
-├── Zama FHE Computation Layer
-│
-└── Schrödinger Hook
-        │
-        ▼
- LayerZero GMP
-        │
-        ▼
-Arbitrum
-│
-├── Assets
-├── Liquidity
-└── Settlement
-```
-
-The encrypted strategy layer can operate on Ethereum using Zama's FHE infrastructure while assets, liquidity, and trading activity remain on Arbitrum.
-
-Cross-chain state synchronization is handled through General Message Passing (GMP).
 
 ---
 
@@ -231,10 +195,8 @@ This removes the need for centralized keeper infrastructure while ensuring portf
 
 * Uniswap v4 Hooks
 * Fully Homomorphic Encryption (FHE)
-* Zama FHEVM
 * Tellor Oracle Network
 * Reactive Network
-* LayerZero GMP
 * ERC-1155 Multi-Token Standard
 * Solidity
 * Foundry
