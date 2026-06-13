@@ -2,7 +2,7 @@
 
 The **Schrödinger Hook** is a privacy-preserving Uniswap v4 Hook designed for Real-World Assets (RWAs), institutional portfolios, and encrypted trading strategies.
 
-By combining **Uniswap v4 Hooks**, **Fully Homomorphic Encryption (FHE)**, **Tellor Oracles**, and **Reactive Network automation**,, the Schrödinger Hook enables portfolio management and execution logic to remain private while assets continue to settle transparently on public blockchains.
+By combining **Uniswap v4 Hooks**, **Fully Homomorphic Encryption (FHE)**, **Tellor Oracles**, and **Reactive Network automation**, the Schrödinger Hook enables portfolio management and execution logic to remain private while assets continue to settle transparently on public blockchains.
 
 The protocol introduces a new category of market infrastructure where allocations, exposures, rebalance decisions, and strategy parameters can remain encrypted while preserving composability with existing DeFi ecosystems.
 
